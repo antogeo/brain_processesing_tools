@@ -14,7 +14,7 @@ path, filename = os.path.split(file_path)
 
 fsl.FSLCommand.set_default_output_type('NIFTI')
 example_nii = fnmatch.filter(os.listdir(path), '*.nii')
-
+print example_nii
 for x in range(0, len(example_nii)):
 	btr = fsl.BET()
 	btr.inputs.in_file = path + "/" + example_nii[x]
